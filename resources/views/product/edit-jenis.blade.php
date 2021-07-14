@@ -1,0 +1,17 @@
+@extends('layouts.app')
+@section('content')
+<div class="container">
+    <div class="card">
+    <div class="card-body">
+    <div class="row">
+        <div class="col-md-12">
+			{!! Form::model($jenis, ['route' => ['jenis.update', $jenis],'method' =>'patch', 'files' => true])!!}
+							@include('product._jenis_form', ['model' => $jenis])
+			{!! Form::close() !!}	   
+        </div>    
+    </div>
+    </div>
+    </div>
+    
+</div>
+@endsection
